@@ -1,0 +1,23 @@
+
+Functional Programming :
+  - Allows programs to be written clearly
+  - the closest programming style to mathematical writing , thinking
+  - the basic element of the computation is the Functional
+  
+
+Syntax :
+The syntax of a programming language is the set of rules applied to describe a problem
+
+f(a) => f a
+f(a,b) + cd => f a b + c * d
+f(g(b)) => f (g b)
+f(a)g(b) => f a * g b
+
+Course content:
+    - how to write functions -> definition, guards, recursive functions
+    - datastructures -> lists , tuple, record, array, class
+    - higher order functions -> map, fold, iterate
+    - types -> simple types, algebraic types, composite types, trees
+    - algorithms -> search, sort, traverse
+
+    This course we using Clean programming language.
