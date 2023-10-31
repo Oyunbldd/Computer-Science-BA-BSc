@@ -1,0 +1,6 @@
+A good algorithm is like a sharp knife 
+It doest exactly what it is supposed to do with a minimum amount of applied effort.
+
+Using the wrong algorithm to solve a problem is like trying to cut a steak with screwdriver
+
+You may eventually get a digestible result, but you will expend considerably more effort than necessary, and the result is unlikly to be aesthetically pleasing.

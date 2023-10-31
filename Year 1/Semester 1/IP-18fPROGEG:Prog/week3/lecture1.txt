@@ -1,0 +1,28 @@
+Programming Lecture 1:
+
+-- Steps of creating a computer program --
+1.Specification (from what?) -> Specification
+2.Design (with what? how?) -> data + algorithmic description
+3.Coding (how by computer?) -> code (representation + implementation)
+4.Testing (any errors/bugs?) -> list of errors (dianosis)
+5.Searching for bugs (where is the bug?) -> location and finding reason of bug
+6.Correction (how would it be correct?) -> correct program
+7.Quality assurance, efficiency (could we make it better? how?) -> good program
+8.Documentation (how does it work?) -> usable program
+9.Usage, maintenance (is it still ok?) -> durable program 
+
+
+Specification ::
+Aim: give the task in formalized way
+
+Components:
+ - Input data (identifier, set of value)
+   - Information about the input -> We called it Precondition
+ - Output, result (indentifier, set of values)
+ - The statement used to be get the result -> We called it Postcondition
+ 
+Tools of specification:
+ - Text description
+ - Mathematical formulas
+ 
+Task -> Specification -> Algorithm
