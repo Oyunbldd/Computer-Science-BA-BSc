@@ -1,0 +1,15 @@
+/Users/oyunbldd/Projects/lab6/lab6/bin/Debug/net6.0/lab6
+/Users/oyunbldd/Projects/lab6/lab6/bin/Debug/net6.0/lab6.deps.json
+/Users/oyunbldd/Projects/lab6/lab6/bin/Debug/net6.0/lab6.runtimeconfig.json
+/Users/oyunbldd/Projects/lab6/lab6/bin/Debug/net6.0/lab6.dll
+/Users/oyunbldd/Projects/lab6/lab6/bin/Debug/net6.0/lab6.pdb
+/Users/oyunbldd/Projects/lab6/lab6/obj/Debug/net6.0/lab6.csproj.AssemblyReference.cache
+/Users/oyunbldd/Projects/lab6/lab6/obj/Debug/net6.0/lab6.GeneratedMSBuildEditorConfig.editorconfig
+/Users/oyunbldd/Projects/lab6/lab6/obj/Debug/net6.0/lab6.AssemblyInfoInputs.cache
+/Users/oyunbldd/Projects/lab6/lab6/obj/Debug/net6.0/lab6.AssemblyInfo.cs
+/Users/oyunbldd/Projects/lab6/lab6/obj/Debug/net6.0/lab6.csproj.CoreCompileInputs.cache
+/Users/oyunbldd/Projects/lab6/lab6/obj/Debug/net6.0/lab6.dll
+/Users/oyunbldd/Projects/lab6/lab6/obj/Debug/net6.0/refint/lab6.dll
+/Users/oyunbldd/Projects/lab6/lab6/obj/Debug/net6.0/lab6.pdb
+/Users/oyunbldd/Projects/lab6/lab6/obj/Debug/net6.0/lab6.genruntimeconfig.cache
+/Users/oyunbldd/Projects/lab6/lab6/obj/Debug/net6.0/ref/lab6.dll

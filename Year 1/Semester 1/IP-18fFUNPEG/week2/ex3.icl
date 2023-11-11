@@ -365,7 +365,7 @@ del_firstlast2 x
 // 24. Rewrite flatten with ++
 // Start = flatten [[1, 2, 3], [3, 4], [5, 7, 8, 9]]
 
-lc :: [[Int]] -> [Int]
+// lc :: [[Int]] -> [Int]
 
 
 
@@ -518,5 +518,15 @@ f8 [x:xs]
 | notempty x = [x: f8 xs]
 = f8 xs
 
+
+// Start = drop 1 [1123321,1112,1113]
 //Start = f8 [[1,2,3],[],[3,4,5],[2,2],[],[],[]] 
 
+
+check :: [a][a] -> Bool | == a 
+check [][] = True 
+check [] [y:ys] = False
+check [x : xs] [] = False
+check [x : xs][y :ys] = x ==y && xs==ys
+
+Start = check [1,2,3] [1,2]

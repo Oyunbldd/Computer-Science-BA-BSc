@@ -28,11 +28,14 @@ countingValues :: [a] -> [Int]
 
 
 
-maxFreq :: [a] -> Int | == a
-maxFreq [] = 0
-maxFreq [x : xs] 
-| helperFunction x xs 
+// maxFreq :: [a] -> Int | == a
+// maxFreq [] = 0
+// maxFreq [x : xs] 
+// | helperFunction x xs 
 
+
+
+Start = (~)[1..3]
 
 //Start = maxFreq ['a', 'b', 'c', 'a', 'a']//3 --> most frequent element is 'a', frequency is 3
 //Start = maxFreq [1, 1, 2, 2, 2, 2, 3, 4, 5, 5, 5]//4 --> most frequent element is 2, frequency is 4

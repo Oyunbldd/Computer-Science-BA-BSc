@@ -22,7 +22,7 @@
 .depend "StdOverloaded" "20211222160339"
 .depend "StdBool" "20211222160339"
 .depend "StdEnv" "20211222160339"
-.module m_test "test" "20231019122159"
+.module m_test "test" "20231109082437"
 .endinfo
 .impmod _system
 .implab _cycle_in_spine
@@ -59,121 +59,39 @@
 .impdesc d_S.6
 .implab n_S.6 ea_S.6
 .implab _driver
-.impmod StdInt
-.implab e_StdInt_s<;17
-.impmod StdBool
-.implab e_StdBool_snot
-.implab e_StdBool_s==;3
+.impmod StdList
+.implab e_StdList_sunzip
 .export __test_Start
 .o 0 0
 __test_Start
-	build _ 0 n3
+	build _ 0 n1
 .d 1 0
 	jmp _driver
-.n 0 _ ea3
+.n 0 _
 .o 1 0
-n3
+n1
 	push_node _cycle_in_spine 0
-.o 1 0
-ea3
-.o 1 0
-s3
+.d 0 0
+	jsr ea1
+.o 2 0
+	push_a 1
+	push_a 1
+	fillh _Tuple 2 4
+	pop_a 2
+.d 1 0
+	rtn
+.o 0 0
+ea1
+.o 0 0
+s1
 	buildh _Nil 0
-	buildI 16
-	buildh _Cons 2
-	buildI 17
-	buildh _Cons 2
-	buildI 14
-	buildh _Cons 2
-	buildI 3
-	buildh _Cons 2
-	buildI 14
-	buildh _Cons 2
-	buildI 5
+	buildI 22
+	buildI 11
+	buildh _Tuple 2
 	buildh _Cons 2
 	buildI 2
+	buildI 1
+	buildh _Tuple 2
 	buildh _Cons 2
-.d 2 0
-	jmp s2
-.n 1 _ ea2
-.o 1 0
-n2
-	push_node _cycle_in_spine 1
-.o 2 0
-ea2
-	jsr_eval 0
-.o 2 0
-s2
-	eq_desc _Nil 0 0
-	jmp_true case.1
-	jmp case.2
-case.1
-	fillh _Nil 0 1
-	pop_a 1
 .d 1 0
-	rtn
-case.2
-	repl_args 2 2
-	push_a 1
-	jsr_eval 0
-	push_a 1
-.d 2 0
-	jsr s1
-.o 0 1 b
-	pushB TRUE
-	push_b 1
-	update_b 1 2
-	update_b 0 1
-	pop_b 1
-	eqB
-	jmp_false else.3
-	push_a 1
-	build _ 1 n2
-	push_a 1
-	fillh _Cons 2 4
-	pop_a 2
-.d 1 0
-	rtn
-else.3
-	push_a 1
-	updatepop_a 0 2
-.d 2 0
-	jmp s2
-.o 2 0
-s1
-	eq_desc _Nil 0 1
-	jmp_true case.4
-	jmp case.5
-case.4
-	pop_a 2
-	pushB TRUE
-.d 0 1 b
-	rtn
-case.5
-	push_args 1 2 2
-	buildh _Nil 0
-	update_a 0 4
-	pop_a 1
-	push_a 2
-	jsr_eval 0
-	pushI_a 3
-	pop_a 1
-	push_a 0
-	jsr_eval 0
-	pushI_a 1
-	pop_a 1
-	ltI
-	notB
-	jmp_false else.6
-	push_a 1
-	jsr_eval 0
-	push_a 3
-	update_a 1 5
-	updatepop_a 0 4
-.d 2 0
-	jmp s1
-else.6
-	pop_a 4
-	pushB FALSE
-.d 0 1 b
-	rtn
+	jmp e_StdList_sunzip

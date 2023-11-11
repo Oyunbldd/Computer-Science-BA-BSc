@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{1FC2400B-C5C4-40E0-A928-2CE76B28DAA2}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../../../usr/local/share/dotnet/sdk/7.0.310/Current/Microsoft.Common.props">
+    <Files>
+      <File FileName="lab7/Program.cs" />
+      <File FileName="../../../../../../../../usr/local/share/dotnet/sdk/7.0.310/Current/Microsoft.Common.props" Line="62" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="lab7" expanded="True">
+            <Node name="lab7" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.lab7 PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

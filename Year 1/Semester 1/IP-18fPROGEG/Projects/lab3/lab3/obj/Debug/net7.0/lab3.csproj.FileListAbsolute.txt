@@ -1,0 +1,15 @@
+/Users/oyunbldd/Projects/lab3/lab3/bin/Debug/net7.0/lab3
+/Users/oyunbldd/Projects/lab3/lab3/bin/Debug/net7.0/lab3.deps.json
+/Users/oyunbldd/Projects/lab3/lab3/bin/Debug/net7.0/lab3.runtimeconfig.json
+/Users/oyunbldd/Projects/lab3/lab3/bin/Debug/net7.0/lab3.dll
+/Users/oyunbldd/Projects/lab3/lab3/bin/Debug/net7.0/lab3.pdb
+/Users/oyunbldd/Projects/lab3/lab3/obj/Debug/net7.0/lab3.csproj.AssemblyReference.cache
+/Users/oyunbldd/Projects/lab3/lab3/obj/Debug/net7.0/lab3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/oyunbldd/Projects/lab3/lab3/obj/Debug/net7.0/lab3.AssemblyInfoInputs.cache
+/Users/oyunbldd/Projects/lab3/lab3/obj/Debug/net7.0/lab3.AssemblyInfo.cs
+/Users/oyunbldd/Projects/lab3/lab3/obj/Debug/net7.0/lab3.csproj.CoreCompileInputs.cache
+/Users/oyunbldd/Projects/lab3/lab3/obj/Debug/net7.0/lab3.dll
+/Users/oyunbldd/Projects/lab3/lab3/obj/Debug/net7.0/refint/lab3.dll
+/Users/oyunbldd/Projects/lab3/lab3/obj/Debug/net7.0/lab3.pdb
+/Users/oyunbldd/Projects/lab3/lab3/obj/Debug/net7.0/lab3.genruntimeconfig.cache
+/Users/oyunbldd/Projects/lab3/lab3/obj/Debug/net7.0/ref/lab3.dll

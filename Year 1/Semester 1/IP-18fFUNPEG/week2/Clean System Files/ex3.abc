@@ -22,7 +22,7 @@
 .depend "StdOverloaded" "20211222160339"
 .depend "StdBool" "20211222160339"
 .depend "StdEnv" "20211222160339"
-.module m_ex3 "ex3" "20231016113544"
+.module m_ex3 "ex3" "20231109064314"
 .endinfo
 .impmod _system
 .implab _cycle_in_spine
@@ -60,37 +60,34 @@
 .implab n_S.6 ea_S.6
 .implab _driver
 .impmod StdList
-.implab e_StdList_sflatten
+.implab e_StdList_s==;85
+.impmod StdInt
+.implab e_StdInt_s==;16
 .export __ex3_Start
 .o 0 0
 __ex3_Start
 	build _ 0 n1
 .d 1 0
 	jmp _driver
-.n 0 _ ea1
+.n 0 _
 .o 1 0
 n1
 	push_node _cycle_in_spine 0
-.o 1 0
+.d 0 0
+	jsr ea1
+.o 0 1 b
+	fillB_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 0 0
 ea1
-.o 1 0
+.o 0 0
 s1
 	buildh _Nil 0
-	buildh _Nil 0
-	buildI 9
+	buildI 2
 	buildh _Cons 2
-	buildI 8
-	buildh _Cons 2
-	buildI 7
-	buildh _Cons 2
-	buildI 5
-	buildh _Cons 2
-	buildh _Cons 2
-	buildh _Nil 0
-	buildI 4
-	buildh _Cons 2
-	buildI 3
-	buildh _Cons 2
+	buildI 1
 	buildh _Cons 2
 	buildh _Nil 0
 	buildI 3
@@ -99,6 +96,67 @@ s1
 	buildh _Cons 2
 	buildI 1
 	buildh _Cons 2
-	buildh _Cons 2
 .d 2 0
-	jmp e_StdList_sflatten
+	jmp s2
+.o 2 0
+s2
+	eq_desc _Nil 0 0
+	jmp_true case.1
+	jmp case.2
+case.1
+	eq_desc _Nil 0 1
+	jmp_true case.3
+	jmp case.4
+case.3
+	pop_a 2
+	pushB TRUE
+.d 0 1 b
+	rtn
+case.4
+	push_args 1 2 2
+	buildh _Nil 0
+	update_a 0 4
+	pop_a 1
+	pop_a 2
+	pop_a 2
+	pushB FALSE
+.d 0 1 b
+	rtn
+case.2
+	repl_args 2 2
+	eq_desc _Nil 0 2
+	jmp_true case.5
+	jmp case.6
+case.5
+	pop_a 3
+	pushB FALSE
+.d 0 1 b
+	rtn
+case.6
+	push_args 2 2 2
+	buildh _Nil 0
+	update_a 0 5
+	pop_a 1
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
+	pop_a 1
+	push_a 2
+	jsr_eval 0
+	pushI_a 3
+	pop_a 1
+	eqI
+	jmp_false else.7
+	push_a 1
+	jsr_eval 0
+	push_a 4
+	jsr_eval 0
+	update_a 1 6
+	updatepop_a 0 5
+.d 2 0
+	jmp e_StdList_s==;85
+else.7
+	pop_a 5
+	pushB FALSE
+.d 0 1 b
+	rtn
