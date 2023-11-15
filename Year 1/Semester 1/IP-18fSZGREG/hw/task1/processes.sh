@@ -18,7 +18,7 @@ stop(){
       echo "pid needed"
      exit 1
     else
-    sed -i '' "/^$1 / s/S/T/" actuals.dat
+    sed -i  "/^$1 / s/S/T/" actuals.dat
     echo "Process stopped: PID -> $1" 
   fi
 }
@@ -29,7 +29,7 @@ kill(){
       echo "pid needed"
      exit 1
     else
-    sed -i '' "/^$1 /d" actuals.dat
+    sed -i  "/^$1 /d" actuals.dat
     echo "Process killed: PID -> $1" 
   fi
 }

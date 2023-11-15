@@ -1,0 +1,93 @@
+1. Sorting
+2. Primes
+
+Sorting lists:
+
+Start = sort [3,1,4,2,0]  // [0,1,2,3,4]
+
+//inseting in already sorted lists
+Insert :: a [a] -> [a] | Ord a 
+Insert e [] = [e]
+Insert e [ x : xs ]
+| e <= x = [e, x : xs]    <- In that case i-th element is right position or smallar than next one
+| otherwise = [ x : Insert e xs]  <- In taht case i-th element and i+1 the element swap the position    
+                                     then called again insert function 
+
+Start = Insert 5 [2,4..10] // [2,4,5,6,8,10]
+
+We use this function  only already sort list !!!!
+
+
+
+List and Array is two different type of container of numbers . Don't be mistake. ! It's too different
+Example 
+lst = [1,2,3,4] 
+arr = [1,2,3,4]
+
+I need the 3rd element . How can I take this ?
+
+lst !! 3 
+arr[3]      see the differences.
+
+lst  -> like a linked list or chain list it needes always current value and next elementh's position of ram
+For array we don't need this.
+
+
+We can't use Insert function in Array only use in List !!!
+
+Start = Insert 5 [2,4,6,8] -> [2,4,5,6,8] 
+
+
+
+
+
+mysort :: [a] -> [a] | Ord a 
+mysort [] = [] 
+mysort [a : x] = Insert a (mysort x)
+
+Start = mysort [3,1,4,2,0 ] // [0,1,2,3,4]
+
+Insert 3 ( Insert 1 ( Inser 4 ( Insert 2 (Insert 0 [] ) ) ) )
+
+Mergesort
+
+merge :: [a] [a] -> [a] | Ord a  
+merge [] ys = ys 
+merge xs [] = xs 
+merge [x : xs ][ y : ys]
+| x <= y = [x : merge xs [ y : ys]]
+| otherwise = [y: merge [x : xs] ys]
+
+
+
+Mergesort 2 
+
+msort :: [a] -> [a] | Ord a 
+msort xs 
+| len <= 1 = xs
+| otherwise = merge (msort ys) (msort zs)
+
+where ys = take half xs 
+      zs = drop half xs 
+      half = len / 2 
+      len = length xs 
+
+
+
+Quick sort -> Fastest from others 
+
+qsort :: [b] -> [b] | Ord b 
+qsort [] = []
+qsort [a : xs] = qsort [x \\ x <-xs | x < a] ++ [a] ++ 
+                 qsort [x \\ x <-xs | x >=a]
+
+https://miro.medium.com/v2/resize:fit:577/1*bIJvejLlEshkf-ehYJJlWQ.png                 
+                 
+
+Prime numbers
+
+divisible :: Int Int  -> Bool 
+divisible x n = x rem n = 0 
+
+denominators :: Int -> [Int]
+denominators x = filter (divisible x )[1..x]
