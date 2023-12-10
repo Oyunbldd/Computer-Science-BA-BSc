@@ -45,8 +45,8 @@ f n = takeWhile ((<)0) (iterate (\ x= x/2) n)
 arr2 :: Int -> {Int}
 arr2 n = {x \\ x<-f n}
 
-//Start :: {Int}
-//Start = arr2 100
+// Start :: {Int}
+// Start = arr2 100
 
 
 
@@ -112,12 +112,13 @@ rem_max arr = {x \\ x <-: arr | x <> maxList(arrToList arr)}
 // 5th element of first and 5th element of second arrays, and choose maximum of the two.
 // You can assume that arrays have same length. 
 
-//maxOfTwo :: {Int} {Int} -> {Int}
+maxOfTwo :: {Int} {Int} -> {Int}
+maxOfTwo arr1 arr2 = { max x y \\ x <-: arr1 &  y <-: arr2}
 
 //Start = maxOfTwo {} {} // {}
-//Start = maxOfTwo {1} {5} // {5}
-//Start = maxOfTwo {1,5,4} {2,3,6} // {2,5,6}
-//Start = maxOfTwo {1,2,3,4,5} {1,2,3,4,5} // {1,2,3,4,5}
+// Start = maxOfTwo {1} {5} // {5}
+// Start = maxOfTwo {1,5,4} {2,3,6} // {2,5,6}
+// Start = maxOfTwo {1,2,3,4,5} {1,2,3,4,5} // {1,2,3,4,5}
 
 
 //-------------6------------
@@ -126,7 +127,14 @@ rem_max arr = {x \\ x <-: arr | x <> maxList(arrToList arr)}
 // in the array, and it should return false
 // if any element is distinct.
 
-//f :: {Int} -> Bool
+checker :: Int {Int} -> Int
+checker n arr = size { x \\ x <-:arr | x == n}
+
+Start :: Int {Int}
+Start = checker 10 {1,2,2,2,1}
+
+// f7 :: {Int} -> Bool
+// f7 arr = {}
 
 //Start = f {1,2,3,1,3,2,2,2} // True
 //Start = f {1,2,3,4,3,2,1} // False

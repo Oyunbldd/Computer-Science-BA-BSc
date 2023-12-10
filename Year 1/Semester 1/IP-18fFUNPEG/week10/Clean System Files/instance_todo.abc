@@ -1,5 +1,5 @@
 .comp 920 010111010010000
-.start __arrays_Start
+.start __instance_todo_Start
 .depend "_SystemEnumStrict" "20211222160339"
 .depend "_SystemStrictLists" "20211222160339"
 .depend "StdStrictLists" "20211222160339"
@@ -22,7 +22,7 @@
 .depend "StdOverloaded" "20211222160339"
 .depend "StdBool" "20211222160339"
 .depend "StdEnv" "20211222160339"
-.module m_arrays "arrays" "20231116214949"
+.module m_instance_todo "instance_todo" "20231201131712"
 .endinfo
 .impmod _system
 .implab _cycle_in_spine
@@ -61,81 +61,180 @@
 .implab _driver
 .impmod StdList
 .implab e_StdList_slength;47
+.implab e_StdList_ssum;72
+.impmod StdString
+.implab e_StdString_stoString;7
+.implab e_StdString_s+++;11
 .impmod _SystemArray
+.impmod StdReal
+.implab e_StdReal_s/;5
+.implab e_StdReal_stoReal;13
 .impmod StdInt
 .implab e_StdInt_s+;6
 .implab e_StdInt_s-;7
 .implab e_StdInt_sone;11
-.implab e_StdInt_s==;16
 .implab e_StdInt_s<;17
 .impmod StdBool
 .implab e_StdBool_snot
-.export __arrays_Start
+.record r14 aa 2 0 "Teacher"
+.record r17 aaaa 4 0 "Student"
+.desc d23 _hnf _add_arg 3 0 "Node"
+.desc d24 _hnf _hnf 0 0 "Leaf"
+.export __instance_todo_Start
 .o 0 0
-__arrays_Start
-	build _ 0 n2
+__instance_todo_Start
+	build _ 0 n4
 .d 1 0
 	jmp _driver
 .n 0 _
 .o 1 0
-n2
+n4
 	push_node _cycle_in_spine 0
 .d 0 0
-	jsr ea2
-.o 0 1 i
-	fillI_b 0 0
-	pop_b 1
+	jsr ea4
+.o 1 0
+	fillh ARRAY 1 1
 .d 1 0
 	rtn
 .o 0 0
-ea2
+ea4
+.o 0 0
+s4
+.d 0 0
+	jsr s2
+.o 4 0
+.d 4 0
+	jmp s6
 .o 0 0
 s2
+	build _ 0 n1
+	build _ 0 n25
+	buildI 19
+	buildAC "Nikola"
+	buildh ARRAY 1
+.d 4 0
+	rtn
+.n 0 _ ea25
+.o 1 0
+n25
+	push_node _cycle_in_spine 0
+.o 1 0
+ea25
+.o 1 0
+s25
 	pushI 5
 	create_array_ _ 1 0
-	buildI 1
+	buildI 2
 	pushI 4
 	push_a 1
 	update_a 1 2
 	update_a 0 1
 	pop_a 1
 	update _ 1 0
-	buildI 2
+	buildI 4
 	pushI 3
 	push_a 1
 	update_a 1 2
 	update_a 0 1
 	pop_a 1
 	update _ 1 0
-	buildI 2
+	buildI 4
 	pushI 2
 	push_a 1
 	update_a 1 2
 	update_a 0 1
 	pop_a 1
 	update _ 1 0
-	buildI 2
+	buildI 4
 	pushI 1
 	push_a 1
 	update_a 1 2
 	update_a 0 1
 	pop_a 1
 	update _ 1 0
-	buildI 1
+	buildI 4
 	pushI 0
 	push_a 1
 	update_a 1 2
 	update_a 0 1
 	pop_a 1
 	update _ 1 0
-	buildI 10
-.d 2 0
-	jmp s1
-.o 2 0
-s1
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
+.n 0 _
+.o 1 0
+n1
+	push_node _cycle_in_spine 0
+.o 0 0
+ea1
+	buildAC "Functional"
+	buildh ARRAY 1
+	buildAC "Peter"
+	buildh ARRAY 1
+	fill_r r14 2 0 2 0 0
+	pop_a 2
+.d 1 0
+	rtn
+.o 4 0
+s6
+	push_a 3
+	jsr_eval 0
+	repl_r_args 2 0
+	updatepop_a 0 1
+	jsr_eval 0
+	push_array 0
+	updatepop_a 0 1
+	push_a 4
+	push_a 4
+	push_a 4
+	push_a 4
+.d 4 0
+	jsr s3
+.o 0 1 r
+.d 0 1 r
+	jsr RtoAC
+.o 1 0
+	push_a 2
+	jsr_eval 0
+	push_array 0
+	updatepop_a 0 1
+	buildAC " "
 	push_a 1
 	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 5
+	update_a 0 6
+	update_a 0 7
+	update_a 0 8
+	pop_a 1
+.d 2 0
+	jsr s5
+.o 1 0
+.d 2 0
+	jsr s5
+.o 1 0
+	buildAC " "
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	jsr s5
+.o 1 0
+	update_a 1 5
+	updatepop_a 0 4
+.d 2 0
+	jmp s5
+.o 4 0
+s3
+	push_a 2
+	jsr_eval 0
+	push_array 0
 	updatepop_a 0 1
+	updatepop_a 0 4
 	push_a 0
 	push_arraysize _ 1 0
 	pushI 1
@@ -145,150 +244,87 @@ s1
 	push_a 1
 	buildh ARRAY 1
 	pushI 0
-	push_a 3
 	update_b 1 2
 	updatepop_b 0 1
-	update_a 2 4
-	update_a 1 3
-	updatepop_a 0 2
-.d 3 2 ii
-	jsr s3
+	update_a 1 2
+	updatepop_a 0 1
+.d 2 2 ii
+	jsr s7
 .o 1 0
+	push_a 0
 .d 1 0
-	jmp e_StdList_slength;47
-.o 3 2 ii
-s3
+	jsr e_StdList_slength;47
+.o 0 1 i
+	ItoR
+	push_a 0
+	updatepop_a 0 1
+.d 1 0
+	jsr e_StdList_ssum;72
+.o 0 1 i
+	ItoR
+	divR
+.d 0 1 r
+	rtn
+.o 2 2 ii
+s7
 	push_b 0
 	push_b 2
 	ltI
 	notB
-	push_b 2
-	push_a 0
-	push_b 2
-	push_a 2
-	push_b 2
-	update_b 2 3
-	update_b 1 2
-	update_b 0 1
-	pop_b 1
-	update_a 1 3
-	updatepop_a 0 2
-	update_b 2 4
-	update_b 1 3
-	updatepop_b 0 2
-.d 3 3 bii
-	jmp s5
-.o 3 3 bii
-s5
-	eqB_b TRUE 0
-	jmp_true case.1
-	jmp case.2
-case.1
-	push_a 1
-	jsr_eval 0
-	pushI_a 2
-	pop_a 1
-	push_a 0
-	jsr_eval 0
+	jmp_false else.1
+	push_b 0
 	push_array 0
-	updatepop_a 0 1
-	push_b 2
-	update_a 1 2
 	updatepop_a 0 1
 	push_a 0
 	select _ 1 0
-	jsr_eval 0
-	pushI_a 0
-	pop_a 1
 	push_a 1
-	push_b 4
-	push_b 4
-	push_a 1
-	update_a 1 2
-	update_a 0 1
-	pop_a 1
-	push_b 3
-	update_b 2 4
-	update_b 0 2
-	update_b 3 0
-	update_b 1 3
-	update_b 0 1
-	pop_b 1
-	update_a 1 2
-	updatepop_a 0 1
-	update_b 3 6
-	update_b 2 5
-	update_b 1 4
-	updatepop_b 0 3
-.d 3 4 iiii
-	jmp s4
-case.2
-	fillh _Nil 0 2
-	pop_a 2
-	pop_b 3
-.d 1 0
-	rtn
-.o 3 4 iiii
-s4
-case.3
-	push_b 1
-	push_b 1
-	eqI
-	jmp_false else.5
+	buildh ARRAY 1
 	push_a 0
-	buildI_b 3
-	buildI_b 2
 	push_b 1
-	build_u _ 3 1 n8
-	buildI_b 0
-	fillh _Cons 2 4
-	pop_a 2
-	pop_b 4
+	push_b 1
+	build_u _ 1 2 n26
+	push_a 2
+	fillh _Cons 2 5
+	pop_a 3
+	pop_b 2
 .d 1 0
 	rtn
-else.5
-	jmp case.4
-case.4
+else.1
+	fillh _Nil 0 1
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+.nu 1 2 _ _
+.o 1 0
+n26
+	push_node_u _cycle_in_spine 1 2
+.o 2 2 ii
+ea26
+.o 2 2 ii
+s26
 	pushI 1
-	push_b 3
+	push_b 1
 	addI
-	push_a 1
-	push_b 4
-	buildI_b 3
+	push_a 0
+	push_b 2
 	push_b 1
 	update_b 1 2
 	update_b 0 1
 	pop_b 1
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 2 2 ii
+	jmp s7
+.o 2 0
+s5
+	push_a 1
+	push_a 1
 	update_a 1 3
 	updatepop_a 0 2
-	update_b 1 5
-	updatepop_b 0 4
-.d 3 2 ii
-	jmp s3
-.nu 3 1 _ _
+.d 2 0
+	jsr catAC
 .o 1 0
-n8
-	push_node_u _cycle_in_spine 3 1
-.o 4 1 i
-ea8
-.o 4 1 i
-s8
-	push_a 1
-	jsr_eval 0
-	pushI_a 2
-	pop_a 1
-	pushI 1
-	push_a 0
-	jsr_eval 0
-	pushI_a 1
-	pop_a 1
-	addI
-	push_a 2
-	buildh ARRAY 1
-	buildI_b 2
-	update_a 1 4
-	updatepop_a 0 3
-	update_b 1 2
-	updatepop_b 0 1
-.d 3 2 ii
-	jmp s3
+.d 1 0
+	rtn

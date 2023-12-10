@@ -97,3 +97,5 @@ sieve [p : xs] = [p: sieve [i\\ i<-xs | i rem p <> 0]]
 // Start = exists 3 [1,2,1,1,2,3,2,1,3]
 // ismember = exists  same function 
 
+
+

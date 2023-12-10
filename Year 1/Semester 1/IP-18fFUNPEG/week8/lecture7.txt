@@ -1,0 +1,26 @@
+Records  : Customized data type
+- Similar like a tuple contain different types of elements. 
+- Declare child elements name and types
+
+:: Person = {
+    name :: String , 
+    birthday :: (Int , Int , Int)
+    fpprogrammer : Bool
+}
+
+IspfUser :: Person -> String
+IspfUser    {fpprogrammer = True } = "Yes"
+IspfUser    _                      = "No"
+
+Start = IspfUser { name = "Me" ,
+                    birthday = (1,1,1999),
+                    fpprogrammer = True }  // Yes
+
+GetName :: Person -> String
+GetName p = p.name  
+
+GetName2 :: Person -> String
+GetName2 {name} = name
+
+ChangeN :: Person String -> Person
+ChangeN p s = {p & name = s}
