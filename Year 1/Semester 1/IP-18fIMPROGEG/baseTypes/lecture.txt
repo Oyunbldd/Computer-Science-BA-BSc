@@ -1,0 +1,125 @@
+
+
+8 bit -> 1 byte
+
+
+Integers:
+    - Decimal form : 42
+    - Octal and hexadecimal form : 0123, 0xCAFE
+    - Unsigned representation: 34u 
+    - Long representation : 99999999L
+    - Combined: 0xFEEL 
+
+Floating point number:
+    - Trivial : 3.1415593 , 5.  .3
+    - With exponent: 31415.93E-4
+    - Long representation: 3.14159262314L
+    - Combined : 3.1415.92412143E-4L
+
+Character and text:
+    - Characters: 'a', 'b', '9'
+    - Strings : "a", "aapltreere" , "1984"  <- Character's array
+    - Escape-sequences: '\n' , '\t'
+    - Multi-part string: "apple" "tree"
+    - Multi-line string: "Apple\tree"
+
+
+Logical type
+    false : 0 , true: everything else (but mainly 1) -> false == 0 , true == 1 
+
+
+Operators:
+    Arithmetic operators:
+        + operand
+        - operand
+        left + right
+        left - right
+        left * right
+        left / right
+        left % right <- remainder
+    
+    Real division
+        5.0 / 2.0 == 2.5
+        5 / 2 == 2
+
+    Power :
+        #include<math.h>
+        pow(5.1 , 2.1);
+
+    Assignment operators:
+        n = 3
+        n += 3  -> n = n + 3 
+        n -= 3  -> n = n - 3
+        n *= 3  -> n = n * 3        
+        n /= 3  -> n = (n / 3)
+        n %= 3  -> n = (n % 3)
+
+    Increment/decrement operators:
+        Side effect
+        c++ ;   c+=1;   c = (c + 1)    
+        ++c ;   c+=1;   c = (c + 1)
+        c-- ;   c-=1;   c = (c - 1)
+        --c ;   c-=1;   c = (c - 1)
+        Value:
+        c++     c 
+        ++c     c + 1
+        c--     c
+        --c     c - 1
+
+    Relational operators:
+        left == right | left equal right
+        left != right | left not equal right
+        left <= right | left less than or equal right   
+        left >= right | left more than or equal right
+        left > right  | left more than right
+        left <  right | left less than right
+
+    Logical operations:
+        left && right 
+        left || right
+        ! operand
+        
+
+    Conditional operator
+        condition ? left : right
+        int x = 1 < 2 ? 10 : 20 ;
+
+    Size of objects:
+        int n -> 2 or 4 bytes
+    Sizeof
+        sizeof(char) == 1
+        sizeof(int) == 4 
+
+        char str[7];
+        sizeof(str) == 7
+
+    Conversation between types
+        float five = 5; -> 5.0 automaticly returned cause type is float
+        float how_much = 5 / 2; returned 2.0
+        float two_and_half = 5. / 2 returned 2.5    
+
+        float pi = 3.141592;
+        int three = (int) pi -> returned 3 cause defined type for int
+
+    Size of integer types
+        short: at least 16 bits -> 2 bytes
+        int : at least 16 bits  -> 2 bytes
+        long : at least 32 bits - > 4 bytes
+        long long : at leaast 64 bits -> 8 bytes
+
+        sizeof(short) <= sizeof(int) <= sizeof(long)
+
+    Four bits:
+        0000 0
+        0001 1  1111 -1
+        0010 2  1110 -2
+        0011 3  1101 -3     0011
+        0100 4  1100 -4    +1101
+        0101 5  1011 -5    -----
+        0110 6  1010 -6    10000
+        0111 7  1001 -7
+                1000 -8
+
+    Float -> butarhai too 
+    float , double, double long
+    sizeof(float) <= sizeof(double) <= sizeof(long double)
