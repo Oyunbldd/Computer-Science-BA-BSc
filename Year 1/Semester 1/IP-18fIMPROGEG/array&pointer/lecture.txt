@@ -1,0 +1,59 @@
+Concept of arrays:
+    - Same type (size) elements in the memory next to each other
+    - Any element access is fast
+    - Fixed number of object
+
+    int vector[4];
+    int matrix[5][3]; /15 elements/
+
+    indexing from 0
+    Address of vector[i]: vector's adress + i * sizeof(int)
+    Address of matrix[i][j]: matrix's address + (i * 3 + j) * sizeof(int)
+
+    Array indexing
+        int t[] = {1,2,3,4} -> 4 elements
+        Indexing from zero
+        Length is unknown in runtime !!!
+        During compilation: sizeof(t) / sizeof(t[0])
+        Bad index : undefined behavior
+
+    Examples:
+    int t[5] = {2,6,5,9,1}
+
+    int sum = 0;
+    for(int i = 0 ; i < 5; i++){
+        sum+= t[i];
+    }
+
+    printf("Sum of elements: %d\n",sum);
+
+    int max = t[0];
+    for(int i = 0 ; i < 5 ; i++ ){
+        if(t[i] > max)
+            max = t[i];
+    }
+    printf("The greatest element:%d\n",max);
+
+
+Definition of C arrays:
+    int a[4]   -> 4 elements, uninitialized
+    int b[]= {1,5,2,8} -> 4 elements
+    int c[8] = { 1,5,2,8} -> 8 elements, filled with zeros !!!
+    int d[3] = {1,5,2,8}  ->  3 elements, unnecessary skipped
+
+    int m[5][3] ->   15 elements sequentially
+    int n[][3] = {{1,2,3},{2,3,4}}   -> Size is mandatory !
+    int q[3][3][4][3]               -> 108 elements
+
+    char s[]    = "apple"
+    char z[]    = {'a','p','p','l','e','\0'}  
+
+    Text:
+    char good[] = "good"
+    char bad[] = {'b','a','d'}
+    char ugly[] = {'u','g','l','y','\0'}
+    printf("%s,%s,%s, good, bad, ugly")
+
+Pointers:
+    - Stores the address of other objects: "points to them" (indirection)
+    - Type-safe
