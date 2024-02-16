@@ -41,7 +41,7 @@ import StdEnv
 //Start = last [1,2,3]
 // Start = take 2 [1,2,3,4]
 //Start = drop 2 [1,2,3,4]
-Start = takeWhile (isEven) [2,2,3,4]
+// Start = takeWhile (isEven) [2,2,3,4]
 // Start = dropWhile (isOdd) [1,2,3,4]
 //Start = filter isEven [1,2,3,4]//[2,4]
 //Start = reverse [1,2,3]//[3,2,1] 

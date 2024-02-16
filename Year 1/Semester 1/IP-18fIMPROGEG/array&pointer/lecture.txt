@@ -57,3 +57,147 @@ Definition of C arrays:
 Pointers:
     - Stores the address of other objects: "points to them" (indirection)
     - Type-safe
+
+    int i = 42;
+    int* p = &i;
+    printf("%d %d", i , *p);  -> 42  42
+    *p = 5;
+    printf("%d %d", i , *p);  -> 5  5
+    int j;
+    p = &j;
+    *p = 10;
+    printf("%d",j);
+    p = NULL;
+
+Connection of pointers and arrays:
+    - Arrays convert to pointers
+    - They are not equivalent!
+
+    int arr [] = {1,2,3}
+    arr = {1,2,4} // compile error
+
+    int* ptr = arr;
+    int *q = &arr[0];
+
+    arr[1] = 5; 
+    ptr[1] = 5;
+
+    int t[] = {3,2,1}
+    ptr = t;
+    arr = 5;
+
+    printf("%d %d\n", sizeof(arr), sizeof(ptr));
+
+    Example :
+        int t[] = {6,2,8,7,3};
+        int* p = NULL;
+
+        for(int i = 0; i < 5 ; i++)
+            if(t[i] % 2 == 1)
+                p=&t[i];
+    
+    Pointer arithmetics:
+        int v[] =     {6, 2, 8, 7, 3};
+        int* p = v; /* v: 6, 2, 8, 7, 3 */
+        int* q = p + 3; /* p q */
+        q = v + 3; /* v converts */
+        ++p; /* v: 6, 5, 8, 7, 3 */
+        *p = 5; /* p q */
+        p += 2; /* v: 6, 5, 8, 1, 3 */
+        *q = 1; /* v: pq */
+        q -= 2; /* v: 6, 2, 8, 1, 3 */
+        *q = 2; /* q p */
+
+    Pointer arithmetics / Compraisons:
+        int v[] = {6,2,8,7,3}
+        int* p = v;
+        int* q = v + 3;   
+
+        if( p == q)
+        if( p != q)
+        if( p < q)
+        if( p > q)
+        
+    Pointer arithmetics / Indexing:
+        char str[] = "hello"
+
+        str[1] = '0' -> hollo
+        *(str+1)= 'o'  
+        *(1+str) = 'o' 
+
+        printf("%s\n", str+3)
+        printf("%c\n", 3[str])
+    
+    Pointer arithmetics / Subtraction:
+        int v[] = {6,2,8,7,3}
+
+        int* p = v;
+        int* q = v + 3;
+
+        int i = q- p -> 3
+     
+    Example : Length of string
+        char str[] = "hello"
+        char* p = str;
+        char* q = str;
+        
+        while(*q! = '\0')
+            ++q;
+
+        printf("Length of string : %d\n", q-p)
+    
+
+Passing arrays as parameters:
+
+    double distance(double a[3], double b[3]){
+        double sum = 0.0;
+        unsigned int i ;
+        for( i = 0 ; i < 3; ++i){
+            double delta = a[i] - b[i];
+            sum + = delta * delta;
+        }
+        return sqrt(sum);
+    }
+
+    int main(){
+        double p[3] = { 36,8,3} , q[3] = {0,0,0};
+        printf("%f\n",distance(p,q));
+        return 0;
+    }
+
+Passing arrays as pointers: Fixed size in compile time
+
+#define DIMENSION 3
+    double distance (double a[DIMENSION], double b[DIMENSION]){
+        double sum = 0.0;
+        unsigned int i ;
+        for (i = 0; i < DIMENSION; ++i) {
+        double delta = a[i] - b[i];
+        sum += delta * delta;
+        }
+    return sqrt(sum);
+    }
+    int main() {
+    double p[DIMENSION] = {36, 8, 3}, q[DIMENSION] = {0, 0, 0};
+    printf("%f\n", distance(p, q));
+    return 0;
+    }
+
+ Passing arrays as parameters:
+    double distance(double a[], double b[], int dim){
+        double sum = 0.0;
+        unsigned int i;
+        for(i = 0 ; i < dim ; ++i){
+            double delta = a[i] - b[i];
+            sum += delta * delta;
+        }
+        return sqrt(sum);
+    }   
+    int main(){
+        double p[] = {3.0,4.0} , q[] = {0.0,0.0};
+        printf("%f\n", distance (p,q , sizeof(p) / sizeof(p[0]) ))
+    }
+    sizeof(p) -> niit memory deer ezelj bui bytes iin hemjee
+    sizeof(p[0]) -> float 2 bytes --> sizeof(p) / sizeof(p[0]) shuud array in hemjeeg tootsooloh bolomjtoi.
+
+    

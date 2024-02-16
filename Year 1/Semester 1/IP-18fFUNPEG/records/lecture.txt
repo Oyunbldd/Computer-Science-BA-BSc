@@ -1,0 +1,17 @@
+Records:
+
+    :: Person = { name :: String
+                    , birthdate :: (Int,Int,Int)
+                    , fpprogramer :: Bool
+                    }
+
+    IsfpUser :: Person -> String
+    IsfpUser {fpprogramer = True} = "Yes" 
+    IsfpUser _                    = "No"
+
+    Start = IsfpUser {name = "Me"
+                    , birthdate = (1,1,1999)
+                    , fpprogramer = True} // "Yes"
+
+Records is similar like a struct | save any type of values.
+                    

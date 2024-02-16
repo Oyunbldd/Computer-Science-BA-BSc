@@ -1,0 +1,36 @@
+Algebraic types:
+
+:: Day = Mon | Tue | Wed | Thu | Fri | Sat | Sun
+
+:: Tree a = Node a (Tree a) (Tree a) | Leaf
+
+sizeT :: (Tree a) -> Int  // size buyu niit Node nuudiin too
+sizeT Leaf = 0
+sizeT (Node x le ri) = 1 + sizeT le + sizeT ri
+
+Start = sizeT (Node 4 (Node 2 (Node 1 Leaf Leaf) (Node 3 Leaf Leaf)) Leaf ) // 4 
+  4 
+ 2  L 
+1  3
+l l l l 
+
+:: Tree a = Node a (Tree a) (Tree a) | Leaf
+
+atree = Node 2 (Node 1 leaf leaf) (Node 3 Leaf Leaf)
+
+depth :; (Tree a) -> Int  // her guniig tootsoolj bui
+depth Leaf = 0 
+
+depth (Node  _ l r ) = (max (depth l) (depth r)) + 1
+
+Start = depth atree // 2
+
+treesort :: ([a]->[a]) | Eq , Ord a 
+treesort = collect o listtoTree
+
+listtoTree :: [a] -> Tree a | Ord, Eq a 
+listtoTree [] = Leaf 
+listtoTree [x : xs] = insertTree x (listtoTree xs)
+
+insertTree :: a (Tree a) -> Tree a | Ord a
+insertTree e Leaf = Node e Leaf Leaf 

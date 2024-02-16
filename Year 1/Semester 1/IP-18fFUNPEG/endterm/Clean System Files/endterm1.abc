@@ -1,0 +1,746 @@
+.comp 920 010111010010000
+.start __endterm1_Start
+.depend "_SystemEnumStrict" "20211222160339"
+.depend "_SystemStrictLists" "20211222160339"
+.depend "StdStrictLists" "20211222160339"
+.depend "_SystemEnum" "20211222160339"
+.depend "StdEnum" "20211222160339"
+.depend "StdMisc" "20211222160339"
+.depend "StdFunctions" "20211222160339"
+.depend "StdCharList" "20211222160339"
+.depend "StdTuple" "20211222160339"
+.depend "StdOrdList" "20211222160339"
+.depend "StdList" "20211222160339"
+.depend "StdClass" "20211222160339"
+.depend "StdFile" "20211222160339"
+.depend "StdString" "20211222160339"
+.depend "_SystemArray" "20211222160339"
+.depend "StdArray" "20211222160339"
+.depend "StdChar" "20211222160339"
+.depend "StdReal" "20211222160339"
+.depend "StdInt" "20211222160339"
+.depend "StdOverloaded" "20211222160339"
+.depend "StdBool" "20211222160339"
+.depend "StdEnv" "20211222160339"
+.module m_endterm1 "endterm1" "20231212234618"
+.endinfo
+.impmod _system
+.implab _cycle_in_spine
+.implab _type_error
+.implab _hnf
+.impdesc e_system_dind
+.implab e_system_nind e_system_eaind
+.impdesc e_system_dif
+.implab e_system_nif e_system_eaif
+.implab e_system_sif
+.impdesc e_system_dAP
+.implab e_system_nAP e_system_eaAP
+.implab e_system_sAP
+.impdesc ARRAY
+.impdesc _Nil
+.impdesc _Cons
+.impdesc _Conss
+.implab n_Conss ea_Conss
+.impdesc _Consts
+.implab n_Consts ea_Consts
+.impdesc _Conssts
+.implab n_Conssts ea_Conssts
+.impdesc _Tuple
+.impdesc d_S.1
+.implab n_S.1 ea_S.1
+.impdesc d_S.2
+.implab n_S.2 ea_S.2
+.impdesc d_S.3
+.implab n_S.3 ea_S.3
+.impdesc d_S.4
+.implab n_S.4 ea_S.4
+.impdesc d_S.5
+.implab n_S.5 ea_S.5
+.impdesc d_S.6
+.implab n_S.6 ea_S.6
+.implab _driver
+.impmod StdOrdList
+.implab e_StdOrdList_smaxList;15
+.impmod StdList
+.implab e_StdList_shd
+.impdesc e_StdList_dlength;47
+.implab e_StdList_nlength;47
+.implab e_StdList_ssum;72
+.impmod _SystemArray
+.impmod StdInt
+.implab e_StdInt_s+;6
+.implab e_StdInt_s-;7
+.implab e_StdInt_sone;11
+.implab e_StdInt_s==;16
+.implab e_StdInt_s<;17
+.impmod StdBool
+.implab e_StdBool_snot
+.desc0 d19 0 "BSc"
+.desc0 d20 1 "MSc"
+.desc0 d21 2 "PhD"
+.desc d27 _hnf _add_arg 2 0 "BTNode"
+.desc d28 _hnf _hnf 0 0 "BTLeaf"
+.desc d30 _hnf _add_arg 2 0 "Pointer"
+.desc d31 _hnf _hnf 0 0 "Nil"
+.desc d38 _hnf _add_arg 2 0 "Elem"
+.desc d39 _hnf _hnf 0 0 "Empty"
+.desc d41 _hnf _add_arg 1 0 "FirstName"
+.desc d42 _hnf _add_arg 1 0 "MiddleName"
+.desc d43 _hnf _add_arg 1 0 "LastName"
+.desc d45 _hnf _add_arg 3 0 "Node"
+.desc d46 _hnf _hnf 0 0 "Leaf"
+.desc d48 _hnf _add_arg 1 0 "A"
+.desc d49 _hnf _add_arg 1 0 "B"
+.export __endterm1_Start
+.o 0 0
+__endterm1_Start
+	build _ 0 n7
+.d 1 0
+	jmp _driver
+.n 0 _ ea7
+.o 1 0
+n7
+	push_node _cycle_in_spine 0
+.o 1 0
+ea7
+.o 1 0
+s7
+	build _ 0 n1
+	build _ 0 n2
+	build _ 0 n3
+	pushI 3
+	create_array_ _ 1 0
+	pushI 2
+	update _ 1 0
+	pushI 1
+	update _ 1 0
+	pushI 0
+	update _ 1 0
+.d 2 0
+	jmp s6
+.n 0 _ ea3
+.o 1 0
+n3
+	push_node _cycle_in_spine 0
+.o 1 0
+ea3
+.o 1 0
+s3
+	buildh _Nil 0
+	buildh _Nil 0
+	buildI 3
+	buildh _Cons 2
+	buildI 10
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	buildh _Cons 2
+	buildh _Nil 0
+	buildI 3
+	buildh _Cons 2
+	buildI -3
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	buildh _Cons 2
+	buildh _Nil 0
+	buildI 3
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	buildI -3
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	buildh _Cons 2
+	buildh _Nil 0
+	buildI 3
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	fillh _Cons 2 2
+.d 1 0
+	rtn
+.n 0 _ ea2
+.o 1 0
+n2
+	push_node _cycle_in_spine 0
+.o 1 0
+ea2
+.o 1 0
+s2
+	buildh _Nil 0
+	buildh _Nil 0
+	buildI 1
+	buildh _Cons 2
+	buildI 1
+	buildh _Cons 2
+	buildI 1
+	buildh _Cons 2
+	buildh _Cons 2
+	buildh _Nil 0
+	buildI 0
+	buildh _Cons 2
+	buildI 0
+	buildh _Cons 2
+	buildI 0
+	buildh _Cons 2
+	buildh _Cons 2
+	buildh _Nil 0
+	buildI 3
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	fillh _Cons 2 2
+.d 1 0
+	rtn
+.n 0 _ ea1
+.o 1 0
+n1
+	push_node _cycle_in_spine 0
+.o 1 0
+ea1
+.o 1 0
+s1
+	buildh _Nil 0
+	buildh _Nil 0
+	buildI 3
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	buildh _Cons 2
+	buildh _Nil 0
+	buildI 1
+	buildh _Cons 2
+	buildI 1
+	buildh _Cons 2
+	buildI 1
+	buildh _Cons 2
+	buildh _Cons 2
+	buildh _Nil 0
+	buildI 3
+	buildh _Cons 2
+	buildI 2
+	buildh _Cons 2
+	buildI 1
+	buildh _Cons 2
+	fillh _Cons 2 2
+.d 1 0
+	rtn
+.o 2 0
+s6
+	push_a 0
+	push_a 0
+	push_arraysize _ 1 0
+	pushI 1
+	push_b 1
+	subI
+	create
+	push_a 1
+	buildh ARRAY 1
+	pushI 0
+	push_a 3
+	buildh ARRAY 1
+	update_b 1 2
+	updatepop_b 0 1
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 2 ii
+	jsr s11
+.o 1 0
+.d 1 0
+	jsr e_StdList_shd
+.o 1 0
+	fill_a 0 1
+	pop_a 1
+.d 1 0
+	rtn
+.o 3 2 ii
+s11
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	push_b 2
+	push_a 0
+	push_b 2
+	push_a 2
+	push_b 2
+	update_b 2 3
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_a 1 3
+	updatepop_a 0 2
+	update_b 2 4
+	update_b 1 3
+	updatepop_b 0 2
+.d 3 3 bii
+	jmp s15
+.o 3 3 bii
+s15
+	eqB_b TRUE 0
+	jmp_true case.1
+	jmp case.2
+case.1
+	push_a 1
+	jsr_eval 0
+	push_array 0
+	updatepop_a 0 1
+	push_a 1
+	jsr_eval 0
+	push_array 0
+	updatepop_a 0 1
+	push_b 1
+	updatepop_b 0 1
+	buildh _Nil 0
+	update_a 0 4
+	pop_a 1
+	push_a 0
+	select _ 1 0
+	jsr_eval 0
+	push_a 3
+	push_b 1
+	push_b 1
+	push_a 3
+	update_a 1 4
+	update_a 2 1
+	update_a 3 2
+	update_a 0 3
+	pop_a 1
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+	update_b 1 3
+	updatepop_b 0 2
+.d 5 2 ii
+	jmp s14
+case.2
+	fillh _Nil 0 2
+	pop_a 2
+	pop_b 3
+.d 1 0
+	rtn
+.o 5 2 ii
+s14
+case.3
+	push_a 2
+	push_a 0
+	push_arraysize _ 1 0
+	pushI 1
+	push_b 1
+	subI
+	create
+	push_a 1
+	buildh ARRAY 1
+	pushI 0
+	update_b 1 2
+	updatepop_b 0 1
+	update_a 1 2
+	updatepop_a 0 1
+.d 2 2 ii
+	jsr s10
+.o 1 0
+.d 1 0
+	jsr e_StdOrdList_smaxList;15
+.o 0 1 i
+	push_a 0
+.d 1 0
+	jsr s5
+.o 0 1 i
+	eqI
+	jmp_false else.5
+	push_a 1
+	buildI_b 1
+	buildI_b 0
+	push_a 5
+	build _ 4 n50
+	push_a 1
+	fillh _Cons 2 6
+	pop_a 4
+	pop_b 2
+.d 1 0
+	rtn
+else.5
+	jmp case.4
+case.4
+	pushI 1
+	push_b 1
+	addI
+	push_a 3
+	push_b 2
+	push_a 3
+	buildh ARRAY 1
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	update_a 1 5
+	updatepop_a 0 4
+	update_b 1 3
+	updatepop_b 0 2
+.d 3 2 ii
+	jmp s11
+.n 4 _ ea50
+.o 1 0
+n50
+	push_node _cycle_in_spine 4
+.o 5 0
+ea50
+.o 5 0
+s50
+	push_a 2
+	jsr_eval 0
+	pushI_a 3
+	pop_a 1
+	pushI 1
+	push_a 1
+	jsr_eval 0
+	pushI_a 2
+	pop_a 1
+	addI
+	push_a 3
+	buildh ARRAY 1
+	push_a 1
+	buildh ARRAY 1
+	update_a 1 5
+	updatepop_a 0 4
+.d 3 2 ii
+	jmp s11
+.o 2 2 ii
+s10
+	push_b 0
+	push_b 2
+	ltI
+	notB
+	jmp_false else.6
+	push_b 0
+	push_array 0
+	updatepop_a 0 1
+	push_a 0
+	select _ 1 0
+	push_a 1
+	buildh ARRAY 1
+	push_a 0
+	push_b 1
+	push_b 1
+	build_u _ 1 2 n51
+	push_a 2
+	build _ 1 n5
+	fillh _Cons 2 5
+	pop_a 3
+	pop_b 2
+.d 1 0
+	rtn
+else.6
+	fillh _Nil 0 1
+	pop_a 1
+	pop_b 2
+.d 1 0
+	rtn
+.nu 1 2 _ _
+.o 1 0
+n51
+	push_node_u _cycle_in_spine 1 2
+.o 2 2 ii
+ea51
+.o 2 2 ii
+s51
+	pushI 1
+	push_b 1
+	addI
+	push_a 0
+	push_b 2
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	updatepop_a 0 1
+	update_b 1 3
+	updatepop_b 0 2
+.d 2 2 ii
+	jmp s10
+.n 1 _
+.o 1 0
+n5
+	push_node _cycle_in_spine 1
+.d 1 0
+	jsr ea5
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 1 0
+ea5
+	jsr_eval 0
+.o 1 0
+s5
+	push_a 0
+	build e_StdList_dlength;47 1 e_StdList_nlength;47
+	create
+	buildI 1
+	push_a 3
+	push_a 3
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	update_a 3 4
+	update_a 2 3
+	update_a 1 2
+	updatepop_a 0 1
+.d 4 0
+	jsr s8
+.o 1 0
+.d 1 0
+	jmp e_StdList_ssum;72
+.n 3 _ ea8
+.o 1 0
+n8
+	push_node _cycle_in_spine 3
+.o 4 0
+ea8
+	jsr_eval 0
+.o 4 0
+s8
+	push_a 1
+	push_a 3
+	push_a 2
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 4 0
+	jmp s13
+.o 4 0
+s13
+	eq_desc _Cons 2 0
+	jmp_true case.7
+	jmp case.8
+case.7
+	repl_args 2 2
+	push_a 3
+	jsr_eval 0
+	pushI_a 4
+	pop_a 1
+	push_a 2
+	jsr_eval 0
+	pushI_a 3
+	pop_a 1
+	ltI
+	notB
+	jmp_false else.9
+	push_a 3
+	build _ 1 n52
+	push_a 3
+	push_a 3
+	push_a 2
+	update_a 2 3
+	update_a 0 2
+	pop_a 1
+	build _ 3 n8
+	push_a 4
+	push_a 2
+	build _ 2 n4
+	fillh _Cons 2 6
+	pop_a 4
+.d 1 0
+	rtn
+else.9
+	fillh _Nil 0 4
+	pop_a 4
+.d 1 0
+	rtn
+case.8
+	fillh _Nil 0 3
+	pop_a 3
+.d 1 0
+	rtn
+.n 1 _ ea52
+.o 1 0
+n52
+	push_node _cycle_in_spine 1
+.o 2 0
+ea52
+.o 2 0
+s52
+	pushI 1
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
+	pop_a 1
+	pop_a 1
+	addI
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 2 _
+.o 1 0
+n4
+	push_node _cycle_in_spine 2
+.d 2 0
+	jsr ea4
+.o 0 1 i
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.o 2 0
+ea4
+	jsr_eval 0
+.o 2 0
+s4
+	create
+	push_a 2
+	buildI 1
+	push_a 3
+	push_a 5
+	update_a 4 6
+	update_a 3 5
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 5 0
+	jsr s9
+.o 1 0
+.d 1 0
+	jmp e_StdList_ssum;72
+.n 4 _ ea9
+.o 1 0
+n9
+	push_node _cycle_in_spine 4
+.o 5 0
+ea9
+	jsr_eval 1
+.o 5 0
+s9
+	push_a 0
+	push_a 3
+	push_a 5
+	push_a 4
+	update_a 3 7
+	update_a 2 6
+	update_a 1 5
+	updatepop_a 0 4
+.d 5 0
+	jmp s12
+.o 5 0
+s12
+	eq_desc _Cons 2 0
+	jmp_true case.10
+	jmp case.11
+case.10
+	repl_args 2 2
+	push_a 3
+	jsr_eval 0
+	pushI_a 4
+	pop_a 1
+	push_a 2
+	jsr_eval 0
+	pushI_a 3
+	pop_a 1
+	ltI
+	notB
+	jmp_false else.12
+	push_a 4
+	jsr_eval 0
+	pushI_a 5
+	pop_a 1
+	pushI_a 3
+	eqI
+	jmp_false else.13
+	push_a 3
+	build _ 1 n53
+	push_a 3
+	push_a 3
+	push_a 7
+	push_a 3
+	update_a 3 4
+	update_a 0 3
+	pop_a 1
+	build _ 4 n9
+	push_a 1
+	fillh _Cons 2 7
+	pop_a 5
+.d 1 0
+	rtn
+else.13
+	push_a 3
+	build _ 1 n54
+	push_a 2
+	jsr_eval 0
+	push_a 4
+	push_a 7
+	push_a 3
+	update_a 2 4
+	update_a 3 2
+	update_a 0 3
+	pop_a 1
+	update_a 3 8
+	update_a 2 7
+	update_a 1 6
+	updatepop_a 0 5
+.d 5 0
+	jmp s9
+else.12
+	fillh _Nil 0 5
+	pop_a 5
+.d 1 0
+	rtn
+case.11
+	fillh _Nil 0 4
+	pop_a 4
+.d 1 0
+	rtn
+.n 1 _ ea54
+.o 1 0
+n54
+	push_node _cycle_in_spine 1
+.o 2 0
+ea54
+.o 2 0
+s54
+	pushI 1
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
+	pop_a 1
+	pop_a 1
+	addI
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
+.n 1 _ ea53
+.o 1 0
+n53
+	push_node _cycle_in_spine 1
+.o 2 0
+ea53
+.o 2 0
+s53
+	pushI 1
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
+	pop_a 1
+	pop_a 1
+	addI
+	fillI_b 0 0
+	pop_b 1
+.d 1 0
+	rtn
