@@ -1,0 +1,105 @@
+Theory section :    
+    - Data structure -> Store and maniplute collections of data
+    - List  -> Sequence of elements of the same type elements
+    - the elements of a list can be any type
+    - they are written between [ ] brakets -> [1,2,3,4,5]
+    - coma separtes the elements -> [1, 2, 3, 4, 5]
+    - considered recursive data type
+    - List in Clean are regarded as linked list 
+    - Empty list looks like this []
+    - Every list has a type, the type of the contained elements !! Every elements of list need to be same type
+    - [1:[2,3,4]] == [1,2,3,4],[1,2,3] == [1: [2:[3:[]]]]
+
+
+One of the most important data structures in Fp is the List
+List - Sequence of elements of the same type values !!!
+
+l1 :: [Int]
+l1 = [1, 2, 3, 4]
+l2 :: [Bool]
+l2 = [True, False, True]
+l3 :: [Real -> Real]
+l3 = [sin, cos, tan]
+l4 :: [[Int]] -> Integer list of list
+l4 = [[1,2], [3]]
+l5 :: [a]    a meanings Any type
+l5 = []
+l6 :: [Int]
+l6 = [1..10]  short for of [1,2,3,4,5,6,7,8,9,19]
+l7 :: [Int]
+l7 = [1..]  infinity list cause not declaring stop condition 
+
+
+The elements need to be constants, may be determined by computation 
+[1+5, 2*10 , length [1,2,3,4], sum[1,2,3,4]] :: [Int]
+[5<10, x == 8, a&&b] :: Bool
+The empty list is pylorphic (olon turliin), is a list of whatever
+
+
+
+sum [] -> empty list of numbers to Int or Real
+and [] -> empty list of Booleans
+[[], [1,2], [3]] -> empty list of integer numbers
+[[True], [4>1], []] -> empty list of Booleans 
+[[[88]], []] -> empty list of lists of numbers 
+length [] -> empty list of anytype values of type a
+
+Start = 
+    [1..10] = [1,2,3,4,5,6,7,8,9,10]
+    [1,2..10] = [ 1,2,3,4,5,6,7,8,9,10]
+    [1,0..-10] = [1,0,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]
+    [1..-10] = []
+    [1..0] = []
+    [1..1] = []
+    [1,3..4] = [1,3]
+    [1..] = [1,2,3,4.....] infinity list
+
+Some builtIn function examples:
+    Start = 
+        hd [1,2,3,4,5]      // 1
+        tl [1,2,3,4,5]      //[2,3,4,5]     
+        drop 2 [1,2,3,4,5]  //[3,4,5] !!
+        take 2 [1,2,3,4,5]  //[1,2]   !!
+        [1,2,3] ++ [6,7]    //[1,2,3,6,7] !!
+        reverse [1,2,3]     //[3,2,1]
+        length [1,2,3,4,5]  //5
+        [1..5]!!2           //3
+
+hd [1, 2, 3, 4, 5] // 1 -> take a head of element
+tl [1, 2, 3, 4, 5] // [2,3,4,5] -> tail of element 
+drop 2 [1, 2, 3, 4, 5] // 
+
+// Taking n elements of any type of list 
+take :: Int [a] -> [a] 
+take n [] = []
+take n [ x : xs ]
+| n < 1 = []
+| otherwise = [x : take (n-1) xs]
+
+Start = take 2 []  // []
+Start = take 2 [1..10] // [1,2]
+Start = take 0 [1..5] // []
+
+
+// Taking 2 element of [1,2,3,4,5] list
+take 2 [1..5]
+ tl
+n = 2 , x = 1, xs = [2, 3, 4, 5]     [ 1 : take 1 [2,3,4,5] ]
+n = 1 , x = 2, xs = [3, 4, 5]        [ 1 : [2 : take 0 [3,4,5] ] ]
+n = 0 < 1      [ 1 : [2 : []]] = [1,2]
+
+// Dropping n elements of any type of list
+drop :: Int [a] -> [a]
+drop n [] = []
+drop n [x : xs]
+| n < 1 = [x : xs]
+| otherwise = drop (n-1) xs
+
+Start = drop 5 [1,2,3] // []
+Start = drop ([1..5]!!2) [1..5] // [4,5]
+Start = drop 0 [1..5] // [1,2,3,4,5]
+
+drop 2 [1..5]
+n = 2 , x = 1 , xs = [2, 3, 4, 5]       drop 1 [2,3,4,5]
+n = 1 , x = 2 , xs = [3, 4, 5]         drop 0 [3,4,5]
+n = 0 < 1  [3,4,5]
