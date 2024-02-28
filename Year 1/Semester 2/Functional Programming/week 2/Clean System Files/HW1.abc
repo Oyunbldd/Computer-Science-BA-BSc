@@ -1,5 +1,5 @@
 .comp 920 010111010010000
-.start __first_Start
+.start __HW1_Start
 .depend "_SystemEnumStrict" "20211222160339"
 .depend "_SystemStrictLists" "20211222160339"
 .depend "StdStrictLists" "20211222160339"
@@ -22,7 +22,7 @@
 .depend "StdOverloaded" "20211222160339"
 .depend "StdBool" "20211222160339"
 .depend "StdEnv" "20211222160339"
-.module m_first "first" "20240223081615"
+.module m_HW1 "HW1" "20240227000914"
 .endinfo
 .impmod _system
 .implab _cycle_in_spine
@@ -59,20 +59,84 @@
 .impdesc d_S.6
 .implab n_S.6 ea_S.6
 .implab _driver
-.export __first_Start
+.impmod StdMisc
+.implab e_StdMisc_sabort
+.impmod StdInt
+.implab e_StdInt_s+;6
+.implab e_StdInt_s-;7
+.implab e_StdInt_s*;9
+.implab e_StdInt_s<;17
+.impmod StdBool
+.implab e_StdBool_snot
+.export __HW1_Start
 .o 0 0
-__first_Start
-	build _ 0 n1
+__HW1_Start
+	build _ 0 n2
 .d 1 0
 	jmp _driver
 .n 0 _
 .o 1 0
-n1
+n2
 	push_node _cycle_in_spine 0
-.o 0 0
-ea1
-	pushI 42
+.d 0 0
+	jsr ea2
+.o 0 1 i
 	fillI_b 0 0
 	pop_b 1
 .d 1 0
+	rtn
+.o 0 0
+ea2
+.o 0 0
+s2
+	pushI 24
+	pushI 13
+	pushI 3
+.d 0 3 iii
+	jmp s1
+.o 0 3 iii
+s1
+	push_b 0
+	pushI 0
+	ltI
+	notB
+	jmp_true then.1
+	push_b 1
+	pushI 0
+	ltI
+	notB
+	jmp_true then.1
+	push_b 2
+	pushI 0
+	ltI
+	notB
+	jmp_false else.1
+then.1
+	buildAC "wrong input\n"
+	pop_b 3
+.d 1 0
+	jsr print_string_
+.o 0 0
+	halt
+	pushI_a 0
+	pop_a 1
+.d 0 1 i
+	rtn
+else.1
+	pushI 1
+	push_b 1
+	subI
+	push_b 3
+	push_b 1
+	update_b 1 2
+	update_b 0 1
+	pop_b 1
+	mulI
+	push_b 2
+	push_b 2
+	mulI
+	update_b 1 4
+	updatepop_b 0 3
+	addI
+.d 0 1 i
 	rtn

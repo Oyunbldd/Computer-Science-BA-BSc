@@ -1,71 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/base.css" rel="stylesheet" type="text/css" />
-    <title>Best movies</title>
-  </head>
-  <body>
-    <header>
-      <h1>Best Movies About The &lt;Internet/Web&gt;</h1>
-      <nav id="mainmenu"><b>HomePage</b> <a href="form.html">Form</a></nav>
 
-      <div id="introduction">
-        <h2>Introduction</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="css/base.css" rel="stylesheet" type="text/css" />
+  <title>Best movies</title>
+</head>
+
+<body>
+  <header>
+    <h1>Best Movies About The &lt;Internet/Web&gt;</h1>
+    <nav id="mainmenu"><b>HomePage</b> <a href="form.html">Form</a></nav>
+
+    <div id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        <q>
+          Although for some people cinema means something superficial and
+          glamorous, it is something else. I think it is the mirror of the
+          world.
+        </q>
+        <b>Jeanne Moreau</b>
+      </p>
+      <p>
+        I love movies about the Internet. As someone who has grown up just as
+        much on the web as off it, I feel as if it’s my virtual home, and
+        inherently connect to films with social networks or hacking or viral
+        media as major plot points perhaps more than films about any other
+        subject.These movies thematically explore different aspects of the
+        web, revealing both the positive and negative affects of living in
+        such a connected world.
+        <b> Please be aware that my list is strongly subjective </b>
+      </p>
+      <nav>
+        <ol>
+          <li><a href="index.html#socialnetwork">The Social Network</a></li>
+          <li><a href="index.html#her">Her</a></li>
+          <li><a href="index.html#deepweb">Deep Web</a></li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div id="content">
+      <div id="oneSide">
+        <h2><i>The Social Network</i></h2>
+        <p>
+          Harvard student <b>Mark Zuckerberg </b>creates the
+          <b> social networking site </b>that would become known as
+          <b>Facebook</b>, but is later sued by two brothers who claimed he
+          stole their idea, and the co-founder who was later squeezed out of
+          the business.
+        </p>
         <p>
           <q>
-            Although for some people cinema means something superficial and
-            glamorous, it is something else. I think it is the mirror of the
-            world.
+            The Social Network" is a great film not because of its dazzling
+            style or visual cleverness, but because it is splendidly
+            well-made. Despite the baffling complications of computer
+            programming, web strategy and big finance, Aaron Sorkin's
+            screenplay makes it all clear, and we don't follow the story so
+            much as get dragged along behind it.
           </q>
-          <b>Jeanne Moreau</b>
         </p>
+        <figure>
+        <img src="./media/TheSocialNetwork.jpg">
+        <figcaption>Photo from the Social Network movie</figcaption>
+        </figure>
+      </div>
+      <div id="oneSide">
+        <h3>Source codes in the Movie</h3>
         <p>
-          I love movies about the Internet. As someone who has grown up just as
-          much on the web as off it, I feel as if it’s my virtual home, and
-          inherently connect to films with social networks or hacking or viral
-          media as major plot points perhaps more than films about any other
-          subject.These movies thematically explore different aspects of the
-          web, revealing both the positive and negative affects of living in
-          such a connected world.
-          <b> Please be aware that my list is strongly subjective </b>
+          There’s quite a bit of code in The Social Network and it looks like
+          it might have been written specially for the film.
         </p>
-        <nav>
-          <ol>
-            <li><a href="index.html#socialnetwork">The Social Network</a></li>
-            <li><a href="index.html#her">Her</a></li>
-            <li><a href="index.html#deepweb">Deep Web</a></li>
-          </ol>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <div id="content">
-        <div id="oneSide">
-          <h2><i>The Social Network</i></h2>
-          <p>
-            Harvard student <b>Mark Zuckerberg </b>creates the
-            <b> social networking site </b>that would become known as
-            <b>Facebook</b>, but is later sued by two brothers who claimed he
-            stole their idea, and the co-founder who was later squeezed out of
-            the business.
+        <figure style="margin: 0;">
+          <pre>
+                  <code>
+                  #!/usr/bin/perl 
+              $wget = "wget -q0-
+              http://leverett.harvard.edu/facebook/compactshow.php
+              --post-data='action=Search'"; 
+              print "$wget\n"; $page = ` $wget`; while ($page =~
+              m/compactshow\.php\?student_id=([0-9]+)/g) { $id=$1 $wget = "wget
+              -q0-
+              http://leverett.harvard.edu/facebook/compactshow.php?student_id=$id";
+              print "$wget\n"; }
+              </code>
+              </pre>
           </p>
-          <p>
-            <q>
-              The Social Network" is a great film not because of its dazzling
-              style or visual cleverness, but because it is splendidly
-              well-made. Despite the baffling complications of computer
-              programming, web strategy and big finance, Aaron Sorkin's
-              screenplay makes it all clear, and we don't follow the story so
-              much as get dragged along behind it.
-            </q>
-          </p>
-        </div>
-        <div id="oneSide">
-          <h3>Source codes in the Movie</h3>
-        </div>
+          <figcaption>Bit of code in The Social Network movie</figcaption>
+        </figure>
+        <h3>Movie soundtrack</h3>
+        <p>My favourite song from the movie: <i>Trent Reznor and Atticus Ross: A Familiar Taste</i>
+        </p>
+        <audio controls>
+          <source src="./media/socialnetwork.mp3" type="audio/mpeg">
+          <p>Your browser not support html5 audio</p>
+          <p><a href="./media/socialnetwork.mp3">You can download the sound of the social network   </a></p>
+        </audio>
       </div>
-    </main>
-  </body>
+    </div>
+    <hr />
+    <article>
+      <h2 id="her">Her</h2>
+      <aside>
+        <table>
+          <caption>
+            <strong>Movie datasheet</strong>
+            <details>
+              <summary>Help</summary>
+              <p>
+                In this table you will find the following rows: Release Date,
+                Title, IMDB's rating
+              </p>
+            </details>
+          </caption>
+          <tr>
+            <th>Release Date</th>
+            <td><time datetime="2014-1-10"> January 10, 2014</time></td>
+          </tr>
+          <tr>
+            <th>Title</th>
+            <td>Her</td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <abbr title="Internet Movie Database">IMDb's rating</abbr>
+            </th>
+            <td><meter max="10" min="0" value="8"></meter>8/10</td>
+          </tr>
+        </table>
+      </aside>
+      <p>
+        In a near future, a lonely writer develops an
+        <b>unlikely relationship</b>
+        with an <b>operating system </b>
+        designed to meet his every need.
+      </p>
+      <p>
+        <i>
+          It's touching and funny and thought provoking and compelling and the
+          music is a perfect partner to the picture. This is bravura
+          filmmaking, risking all on trusting the instinct of a writer and the
+          ability to create a complex, fascinating persona that the audience
+          never sees. But we do feel her.
+        </i>
+      </p>
+      <h3>The trailer of movie</h3>
+      <video controls poster="./media/her.jpg" width="240">
+        <source src="./media/her.mp4" type="video/mp4" />
+      </video>
+    </article>
+    <hr />
+    <article>
+      <h2 id="deepweb">Deep web</h2>
+    </article>
+    <hr />
+  </main>
+</body>
+
 </html>

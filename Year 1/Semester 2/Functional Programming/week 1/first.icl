@@ -2,7 +2,7 @@ module first
 
 import StdEnv
 
-//Start = 42
+// Start = 42
 
 
 f :: Int -> Int

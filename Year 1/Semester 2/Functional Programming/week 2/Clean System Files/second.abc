@@ -1,5 +1,5 @@
 .comp 920 010111010010000
-.start __first_Start
+.start __second_Start
 .depend "_SystemEnumStrict" "20211222160339"
 .depend "_SystemStrictLists" "20211222160339"
 .depend "StdStrictLists" "20211222160339"
@@ -22,7 +22,7 @@
 .depend "StdOverloaded" "20211222160339"
 .depend "StdBool" "20211222160339"
 .depend "StdEnv" "20211222160339"
-.module m_first "first" "20240223081615"
+.module m_second "second" "20240223092257"
 .endinfo
 .impmod _system
 .implab _cycle_in_spine
@@ -59,20 +59,59 @@
 .impdesc d_S.6
 .implab n_S.6 ea_S.6
 .implab _driver
-.export __first_Start
+.impmod StdInt
+.implab e_StdInt_s+;6
+.implab e_StdInt_s-;7
+.implab e_StdInt_s^;12
+.implab e_StdInt_s==;16
+.export __second_Start
 .o 0 0
-__first_Start
-	build _ 0 n1
+__second_Start
+	build _ 0 n2
 .d 1 0
 	jmp _driver
 .n 0 _
 .o 1 0
-n1
+n2
 	push_node _cycle_in_spine 0
-.o 0 0
-ea1
-	pushI 42
+.d 0 0
+	jsr ea2
+.o 0 1 i
 	fillI_b 0 0
 	pop_b 1
 .d 1 0
+	rtn
+.o 0 0
+ea2
+.o 0 0
+s2
+	pushI 3
+.d 0 1 i
+	jmp s1
+.o 0 1 i
+s1
+	pushI 1
+	push_b 1
+	eqI
+	jmp_false else.1
+	pop_b 1
+	pushI 1
+.d 0 1 i
+	rtn
+else.1
+	pushI 1
+	push_b 1
+	subI
+.d 0 1 i
+	jsr s1
+.o 0 1 i
+	push_b 1
+	push_b 2
+.d 0 2 ii
+	jsr e_StdInt_s^;12
+.o 0 1 i
+	update_b 1 2
+	updatepop_b 0 1
+	addI
+.d 0 1 i
 	rtn

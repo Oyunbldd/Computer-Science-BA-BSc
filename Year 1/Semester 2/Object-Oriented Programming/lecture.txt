@@ -1,0 +1,19 @@
+Procedural vs. Object-orienteed Programming
+
+- Procedural programming : the solution is structured into independent units
+- Oop : Parts of the data needed for the solution and the related activities (called methods) are structured into independent units
+
+
+Task : In a series there are natural numbers between 0 and m. Which element is the most frequent? 
+
+- There are several ways to solve it,
+    - Procedural solution: Counting embedded in maximum search,
+        * Let's find the maximum occurrence of the numbers between 0 and m,
+        * Let's find the maximum occurrence of the elemnts in a series.
+
+    - Object-oriented solution: we place the elements into a container (collection)
+      where insertion and maximum search are quick.
+        * Bag containing numbers betwen 0 and m 
+        * Bag containing any natural number.
+
+First of all, we need to analysis and planning then solve

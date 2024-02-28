@@ -1,5 +1,5 @@
 .comp 920 010111010010000
-.start __first_Start
+.start __bonus2_Start
 .depend "_SystemEnumStrict" "20211222160339"
 .depend "_SystemStrictLists" "20211222160339"
 .depend "StdStrictLists" "20211222160339"
@@ -22,7 +22,7 @@
 .depend "StdOverloaded" "20211222160339"
 .depend "StdBool" "20211222160339"
 .depend "StdEnv" "20211222160339"
-.module m_first "first" "20240223081615"
+.module m_bonus2 "bonus2" "20240223094956"
 .endinfo
 .impmod _system
 .implab _cycle_in_spine
@@ -59,20 +59,95 @@
 .impdesc d_S.6
 .implab n_S.6 ea_S.6
 .implab _driver
-.export __first_Start
+.impmod StdString
+.implab e_StdString_stoString;5
+.implab e_StdString_s+++;11
+.impmod StdInt
+.implab e_StdInt_s-;7
+.implab e_StdInt_s*;9
+.implab e_StdInt_s/;10
+.export __bonus2_Start
 .o 0 0
-__first_Start
-	build _ 0 n1
+__bonus2_Start
+	build _ 0 n2
 .d 1 0
 	jmp _driver
 .n 0 _
 .o 1 0
-n1
+n2
 	push_node _cycle_in_spine 0
+.d 0 0
+	jsr ea2
+.o 1 0
+	fillh ARRAY 1 1
+.d 1 0
+	rtn
 .o 0 0
-ea1
-	pushI 42
-	fillI_b 0 0
+ea2
+.o 0 0
+s2
+	pushI 375
+.d 0 1 i
+	jmp s1
+.o 0 1 i
+s1
+	pushI 365
+	push_b 1
+	divI
+	pushI 365
+	push_b 1
+	mulI
+	push_b 2
+	subI
+	pushI 7
+	push_b 1
+	update_b 1 2
+	update_b 0 1
 	pop_b 1
+	divI
+	pushI 7
+	push_b 1
+	mulI
+	pushI 365
+	push_b 3
+	mulI
+	push_b 4
+	subI
+	subI
+.d 0 1 i
+	jsr ItoAC
+.o 1 0
+	buildAC " days "
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+.d 2 0
+	jsr catAC
+.o 1 0
+	buildAC " week "
+.d 2 0
+	jsr catAC
+.o 1 0
+	push_b 0
+	updatepop_b 0 1
+.d 0 1 i
+	jsr ItoAC
+.o 1 0
+.d 2 0
+	jsr catAC
+.o 1 0
+	buildAC " year "
+.d 2 0
+	jsr catAC
+.o 1 0
+	push_b 0
+	updatepop_b 0 2
+.d 0 1 i
+	jsr ItoAC
+.o 1 0
+.d 2 0
+	jsr catAC
+.o 1 0
 .d 1 0
 	rtn
