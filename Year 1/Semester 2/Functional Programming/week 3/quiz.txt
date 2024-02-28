@@ -1,0 +1,39 @@
+We have the content of "quizz1.icl":
+```
+  module classwork
+  import StdEnv
+
+  Start = 1 + 2 + 3
+```
+What is the output of that file?
+  Can not compile -> Cause we declaring same name of the module and file name
+ 
+What is the operator for finding remainder?
+  / 
+  rem 
+  mod 
+  % 
+ 
+ 
+How can we get the opposite value of an integer x?
+  not x 
+  -x 
+  !x 
+  ~x 
+ 
+What is the output of this code?
+
+add100 :: Real -> Real
+add100 x = x + 100.0
+
+Start = add100 3
+  Can not compile 
+
+Question 5
+
+power x n
+| n == 0 = 1
+| n > 0 = x * power x (n - 1)
+calling the function with 5 2 arguments the result is 
+  25 
+  
